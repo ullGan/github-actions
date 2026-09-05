@@ -1,0 +1,23 @@
+# Workflow name shown in the Actions tab
+name: First CI
+
+# When this workflow should start
+on:
+  push:
+
+# One or more jobs
+jobs:
+  test:
+    # GitHub creates an Ubuntu runner
+    runs-on: ubuntu-latest
+
+    # Commands/actions executed in order
+    steps:
+      # Downloads your repository onto the runner
+      - uses: actions/checkout@v4
+
+      # Runs a shell command
+      - run: echo "Repository downloaded"
+
+      # Another shell command
+      - run: echo "CI finished successfully"
