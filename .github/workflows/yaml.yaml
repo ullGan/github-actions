@@ -1,0 +1,12 @@
+name: YAML Practice
+
+on:
+  workflow_dispatch:
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Line 1"
+      - run: echo "Line 2"
+      - run: echo "Line 3"
